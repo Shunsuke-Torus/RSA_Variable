@@ -1,3 +1,9 @@
+"""
+参考文献
+import系　https://qiita.com/mriho/items/52f53559ba7fe7ef06ff
+公開鍵暗号系　https://qiita.com/kunichiko/items/ef5efdb41611d6cf7775#%E7%94%A8%E8%AA%9E
+リポジトリの作成系　https://docs.github.com/ja/github/getting-started-with-github/quickstart/create-a-repo
+"""
 import importlib
 
 import utils_rsa
