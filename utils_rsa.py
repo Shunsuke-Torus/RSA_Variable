@@ -6,7 +6,6 @@ Created on Wed Jul 14 18:08:59 2021
 """
 import sympy
              
-
 def rsa():
     
     print("RSA")
@@ -29,12 +28,12 @@ def rsa():
     n = p*q
     
     #L
-    L = int(sympy.lcm(p-1,q-1))
+    L = int(sympy.lcm(p-1,q-1))#最小公倍数を返すsympy
     
     #e
-    max_num =max(p,q) 
+    max_num =max(p,q)#どちらか一方
     
-    if(e_judge==0):
+    if(e_judge==0):#eの作成
         while(1):
             e = sympy.randprime(max_num,L)
             if sympy.gcd(max_num,L) and max_num < e < L:
@@ -117,42 +116,42 @@ def mode6(n,e,p,q,L,P,C):
         print("ディジタル署名確認:",P)
     return P,C
      
-def secret_key(e,L):#受信者
-    x,y,t = sympy.gcdex(e,L) 
+def secret_key(e,L):#秘密鍵　作成
+    x,y,t = sympy.gcdex(e,L)#shogoありがとう
     #d
     d = int(x) % L
     return d
 
 def encrypt(P,e,n):#暗号化
-    C = pow(P,e,n)
+    C = pow(P,e,n)#P^e %n
     return C
 
 def dencrypt(C,d,n):#復号化
     P = pow(C,d,n)
     return P
     
-def digital_encrypt(P,d,n):
+def digital_encrypt(P,d,n):#ディジタル署名作成
     C = pow(P,d,n)
     return C
 
-def digital_dencrypt(C,e,n):
+def digital_dencrypt(C,e,n):#ディジタル署名確認
     P = pow(C,e,n)
     return P
 
 def char_to_int(P_C: str)->int:
 
-    P_C_list = list(P_C)#1文字ずつ格納
-    P_C_size = len(P_C_list)
+    P_C_list = list(P_C)#1文字ずつ格納。""
+    P_C_size = len(P_C_list)#長さを入力
     total = 0
     num_list = []
     for i in range(0,P_C_size):
-        num_list.append(ord(P_C_list[i])-32)
+        num_list.append(ord(P_C_list[i])-32)#128-32=96 SPは除いていない
     num_list.reverse()
     
-    num_list_size = len(num_list)#OZ　ありがとう　L145とL149の書き方を統一したよ7/5
+    num_list_size = len(num_list)#OZ　ありがとう　L144とL151の書き方を統一したよ7/5
     
     for i in range(0,num_list_size):
-        total += num_list[i]*pow(95,i)#文字　数字　etc 95種類
+        total += num_list[i]*pow(95,i)#asc2*95^i 文字　数字　etc 95種類
     return total
     
 def int_to_char(P_C_int: int) ->chr: #数字から文字 N=95
