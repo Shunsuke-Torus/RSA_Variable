@@ -146,7 +146,7 @@ def char_to_int(P_C: str)->int:
     num_list = []
     for i in range(0,P_C_size):
         num_list.append(ord(P_C_list[i])-32)#128-32=96 SPは除いていない
-    num_list.reverse()
+    num_list.reverse()#1番　小さな数字をする
     
     num_list_size = len(num_list)#OZ　ありがとう　L144とL151の書き方を統一したよ7/5
     
