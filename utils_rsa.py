@@ -200,7 +200,7 @@ def int_to_char(P_C_int: int) ->chr: #数字から文字 N=95
         r = P_C_int % 95
         rlist.append(r)  
         
-    rlist.reverse()#反転して1の位から入れる。
+    rlist.reverse()#反転して最初の位から入れる。
     
     char_list = []#数字を文字にする
     for i in range (0,len(rlist)):
