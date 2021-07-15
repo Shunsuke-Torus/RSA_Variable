@@ -3,6 +3,37 @@
 Created on Wed Jul 14 18:08:59 2021
 
 @author: shun
+公開鍵暗号方式
+C≡P^e(mod n) 暗号化
+P≡C^d(mod n)　復号化
+
+ディジタル署名
+C≡P^d(mod n) 暗号化
+P≡C^e(mod n)　復号化
+
+n=p*q
+
+L=LCM(p-1,q-1)=p-1*q-1/gcd(p,q)
+
+Max{p,q}<e<L and L e が互いに素な数
+
+gcd(l,e)=1
+
+# MAX{p,q}<e<Lに必要
+
+暗号文C =平文^e mod N
+
+平文P   =暗号文^d mod N
+
+Nを可変ではなく　ASC2にのっとって作成　str_listに直接　P,Cを書き込める　時間の短縮が可能になる。(文字入力の)
+
+平文       N     d 
+暗号文     N   e
+公開鍵     N L e d 
+秘密鍵     N L e d
+参考文献
+https://www.unisys.co.jp/tec_info/tr64/6403.pdf
+https://ja.wikipedia.org/wiki/RSA%E6%9A%97%E5%8F%B7#n_%E3%82%92%E6%B3%95%E3%81%A8%E3%81%99%E3%82%8B%E5%86%AA%E5%89%B0%E4%BD%99%E3%81%AE%E8%A8%88%E7%AE%97
 """
 import sympy
              
