@@ -9,18 +9,18 @@ import sympy
 def rsa():
     
     print("RSA")
-    p_judge = int(input("pを持っているなら入力:p,持っていない:0 \n p:"))
-    q_judge = int(input("qを持っているなら入力:q,持っていない:0 \n q:"))
-    e_judge = int(input("eを持っているなら入力:e,持っていない:0 \n e:"))
-    if(p_judge==0):
+    p_judge = int(input("pを持っているなら入力:0,持っていない:1 \n p:"))
+    q_judge = int(input("qを持っているなら入力:0,持っていない:1 \n q:"))
+    e_judge = int(input("eを持っているなら入力:0,持っていない:1 \n e:"))
+    if(p_judge==1):
         p = sympy.randprime(pow(10,299),pow(10,300))#sympy.randprime(a,b)a以上b未満の素数を返す。未満だったので300と書いてもok
-    else:
-        p = p_judge
+    elif(p_judge==0):
+        p = int(input("p:"))
         
-    if(q_judge==0):
+    if(q_judge==1):
         q = sympy.randprime(pow(10,299),pow(10,300))
-    else:
-        q = q_judge
+    elif(q_judge==0):
+        q = int(input("q:"))
         
     while(p==q):
         p = sympy.randprime(pow(10,299),pow(10,300))
@@ -33,13 +33,13 @@ def rsa():
     #e
     max_num =max(p,q)#どちらか一方
     
-    if(e_judge==0):#eの作成
+    if(e_judge==1):#eの作成
         while(1):
             e = sympy.randprime(max_num,L)
             if sympy.gcd(max_num,L) and max_num < e < L:
                 break
-    else:
-        e = e_judge
+    elif(e_judge==0):
+        e = int(input("e:"))
         
     P,C = "0","0" #str defで宣言されていないと言われるため汎用性を高めるため、後で変えるからあらかじめ宣言しておく。
     return n,e,p,q,L,P,C
