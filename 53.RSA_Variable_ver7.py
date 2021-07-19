@@ -8,13 +8,14 @@ gcdex http://ictsr4.com/sw/gcdex/
 """
 import importlib
 
-import utils_rsa
+import utils_rsa2
+
 
 def main():   
     
-    importlib.reload(utils_rsa)
+    importlib.reload(utils_rsa2)
     
-    n,e,p,q,L,P,C = utils_rsa.rsa()
+    n,e,p,q,L,P,C = utils_rsa2.rsa()
     
     while(1):#bit,p,q,L,e
         try:
@@ -22,30 +23,31 @@ def main():
             
             if mode == 1:
                 
-                utils_rsa.mode1(n,e,p,q,L)
+                utils_rsa2.mode1(n,e,p,q,L)
                 
             elif mode ==2:
                 
-                utils_rsa.mode2(n,e,p,q,L)
+                utils_rsa2.mode2(n,e,p,q,L)
                 
             elif mode ==3:
                 
-                P,C = utils_rsa.mode3(n,e,p,q,L,P,C)
+                P,C = utils_rsa2.mode3(n,e,p,q,L,P,C)
                             
             elif mode ==4:
                 
-                P,C = utils_rsa.mode4(n,e,p,q,L,P,C) 
+                P,C = utils_rsa2.mode4(n,e,p,q,L,P,C) 
                     
             elif mode ==5:
                 
-                P,C = utils_rsa.mode5(n,e,p,q,L,P,C) 
+                P,C = utils_rsa2.mode5(n,e,p,q,L,P,C) 
                 
             elif mode ==6:
             
-                P,C = utils_rsa.mode6(n,e,p,q,L,P,C)
+                P,C = utils_rsa2.mode6(n,e,p,q,L,P,C)
             
             elif mode ==7:
                 break
+            
             else:
                 raise ValueError
                 
