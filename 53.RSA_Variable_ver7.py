@@ -5,7 +5,19 @@ import系　https://qiita.com/mriho/items/52f53559ba7fe7ef06ff
 リポジトリの作成系　https://docs.github.com/ja/github/getting-started-with-github/quickstart/create-a-repo
 asc2 コード　https://www.k-cube.co.jp/wakaba/server/ascii_code.html
 gcdex http://ictsr4.com/sw/gcdex/
+
+概要
+    RSA暗号をpythonで作ってみよう。
+    
+必要なモジュール・ライブラリ　モジュールとは、pythonのファイル、ライブラリはいつくかのパッケージをまとめてインストールできるようにしたもの
+モジュール
+    utils_rsa2
+    utils_insert
+ライブラリ
+    importlib
+    sympy
 """
+
 import importlib
 
 import utils_rsa2
