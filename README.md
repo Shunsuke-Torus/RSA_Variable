@@ -1,6 +1,6 @@
 #Shunsuke-Torus/RSA_Variable
 
-*概要  
+* 概要  
   -RSA暗号とディジタル署名をpythonで作ってみよう  
 
 2.このプログラムに求めるもの  
