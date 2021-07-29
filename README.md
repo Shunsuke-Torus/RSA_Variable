@@ -57,6 +57,6 @@
   　また、4月に落ちた基本情報技術者試験を10月にまた受ける予定です。  
 7. 参考文献  
   - RSA 公開鍵暗号方式の実現,浦上浩一,UNISYS TECHNOLOGY REVIEW 第 64 号, FEB. 2000,https://www.unisys.co.jp/tec_info/tr64/6403.pdf,2021/07/29アクセス  
-  -RSA暗号,Wikipedia,https://ja.wikipedia.org/wiki/RSA%E6%9A%97%E5%8F%B7#n_%E3%82%92%E6%B3%95%E3%81%A8%E3%81%99%E3%82%8B%E5%86%AA%E5%89%B0%E4%BD%99%E3%81%AE%E8%A8%88%E7%AE%97  
+  -
   -
   
