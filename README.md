@@ -31,7 +31,8 @@
 5. 反省点  
   ➀ utils_insert()では数字から文字の際、if文を付けることによって最後の最小正剰余の追加を可能にしたが形が不細工である      
   　ため次はもっときれいなプログラムを書きたいと考える。  
-  　特に、[shogo-ppt/rsaのdec_to_n](https://github.com/shogo-ppt/rsa/blob/main/main.py)(L88)の部分は私から見るときれいなプログラムだなと感じたので参考にしていきたいと考える。  
+  　特に、[shogo-ppt/rsaのdec_to_n](https://github.com/shogo-ppt/rsa/blob/main/main.py)(L88)の部分はif文を書かずとも最後の文字を判別できるため私から見るときれいなプログラム  
+    　だと感じたので参考にしていきたいと考える。  
   
    ➁ main()では、プログラムの見やすさを追求した理由から余計な引数が増えた。[RSA_Variable_ver7.py](https://github.com/Shunsuke-Torus/RSA_Variable/blob/main/53.RSA_Variable_ver7.py)  
   
