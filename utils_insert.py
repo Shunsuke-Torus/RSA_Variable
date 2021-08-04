@@ -71,7 +71,7 @@ def int_to_char(P_C_int: int) ->chr: #数字から文字 N=95
         qlist.append(q)#商と余りを式の番号ごとに保存
         rlist.append(r)
         P_C_int = q
-    if P_C_int // 95 < 95:#最後の追加の処理は上ではされない設計のため
+    if P_C_int // 95 < 95:
         r = P_C_int % 95#point
         rlist.append(r)  
         
